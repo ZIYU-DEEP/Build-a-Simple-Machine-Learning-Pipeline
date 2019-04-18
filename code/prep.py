@@ -27,7 +27,8 @@ def type_assignment(column_type):
 
     Inputs:
         column_type (string): the data type of the column
-    Return:
+
+    Returns:
         string
     """
     if column_type in ['integer', 'Y/N']:
@@ -54,7 +55,8 @@ def data_transforming(data_file, df_file, dict_file='Data Dictionary.xls'):
         data_file (string): the filename of source data in csv format
         df_file (string): the filename for the output DataFrame
         dict_file (string): the filename of the data dictionary in excel format
-    Return:
+
+    Returns:
         None
     """
     df = pd.read_csv(os.path.join(SOURCE_PATH, data_file))
@@ -79,6 +81,7 @@ def data_loading(df_file):
 
     Inputs:
         df_file (string): the filename for the output DataFrame
+
     Return:
         df (DataFrame): the loaded data in DataFrame format
     """
@@ -96,7 +99,8 @@ def target_features_split(target_name, df):
 
     Inputs:
         target_name (string): the name for the target column
-    Return:
+
+    Returns:
         target (DataFrame): the target DataFrame
         features (DataFrame): the features DataFrame
     """
@@ -116,7 +120,8 @@ def num_cat_split(features, cat_list):
     Inputs:
         features (DataFrame): the features DataFrame
         cat_list (list): the list to store the names of the categorical columns
-    Return:
+
+    Returns:
         cat (DataFrame): the categorical DataFrame
         num (DataFrame): the numeric DataFrame
     """

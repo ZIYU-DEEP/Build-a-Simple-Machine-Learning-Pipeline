@@ -60,6 +60,7 @@ def dist_plot(data, cut=True):
                         subdata < subdata.quantile(0.95))
             subdata = subdata[_range]
         sns.distplot(subdata, ax=axes[i // fig_cols, i % fig_cols], color='g')
+    sns.despine()
 
 
 def box_plot(data):

@@ -84,3 +84,42 @@ def data_loading(df_file):
     """
     df = pd.read_pickle(os.path.join(PREPARED_PATH, df_file))
     return df
+
+
+# *******************************************************************
+# Split Target and Features (Un-preprocessed)
+# *******************************************************************
+def target_features_split(target_name, df):
+    """
+    Split the DataFrame into two DataFrames: one is for the target, and the
+    other is for the features(un-preprocessed).
+
+    Inputs:
+        target_name (string): the name for the target column
+    Return:
+        target (DataFrame): the target DataFrame
+        features (DataFrame): the features DataFrame
+    """
+    target = df[target_name].to_frame()
+    features = df.drop(target_name, 1)
+    return target, features
+
+
+# *******************************************************************
+# Split Numeric and Categorical Features (Un-preprocessed)
+# *******************************************************************
+def num_cat_split(features, cat_list):
+    """
+    Split the features into two DataFrames: one is for the numeric, and the
+    other is for the categorical.
+
+    Inputs:
+        features (DataFrame): the features DataFrame
+        cat_list (list): the list to store the names of the categorical columns
+    Return:
+        cat (DataFrame): the categorical DataFrame
+        num (DataFrame): the numeric DataFrame
+    """
+    cat = features[[col for col in features.columns if col in cat_list]]
+    num = features[[col for col in features.columns if col not in cat_list]]
+    return cat, num

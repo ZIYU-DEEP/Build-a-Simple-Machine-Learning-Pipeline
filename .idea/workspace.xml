@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="043bec11-3c36-42c4-93b2-6c51eb951e83" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/ziyuye.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/ziyuye.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/3-data-preprocessing.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/explore.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/4-feature-engineering.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/feature_engineering.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/5-model-training.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/model_evaluation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/6-model-evaluation.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/model_training.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/B-data-visualization-and-exploration.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/preprocess.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/explore.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/explore.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code/prep.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/prep.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/notebook/.ipynb_checkpoints/Pipeline Implementation-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebook/.ipynb_checkpoints/Pipeline Implementation-checkpoint.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/notebook/Pipeline Implementation.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebook/Pipeline Implementation.ipynb" afterDir="false" />
@@ -41,35 +38,44 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="36" />
-          <entry key="py" value="2104" />
+          <entry key="py" value="3370" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="36" />
-          <entry key="Python" value="2104" />
+          <entry key="Python" value="3370" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/code/prep.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+            <state relative-caret-position="-893">
+              <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
               <folding>
                 <element signature="e#121#140#0" expanded="true" />
-                <marker date="1555598193954" expanded="true" signature="2692:2693" ph="..." />
+                <marker date="1555605045626" expanded="true" signature="2692:2693" ph="..." />
+                <marker date="1555605045626" expanded="true" signature="3609:3614" ph="..." />
+                <marker date="1555605045626" expanded="true" signature="4332:4430" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/code/explore.py">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="46" column="18" lean-forward="true" selection-start-line="46" selection-start-column="18" selection-end-line="46" selection-end-column="18" />
+              <folding>
+                <element signature="e#139#158#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -120,6 +126,7 @@
         <option value="$PROJECT_DIR$/code/A-data-preparation.py" />
         <option value="$PROJECT_DIR$/code/A_data_preparation.py" />
         <option value="$PROJECT_DIR$/code/prep.py" />
+        <option value="$PROJECT_DIR$/code/explore.py" />
       </list>
     </option>
   </component>
@@ -269,19 +276,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/explore.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/code/preprocess.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/code/prep.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        <state relative-caret-position="-893">
+          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
           <folding>
             <element signature="e#121#140#0" expanded="true" />
-            <marker date="1555598193954" expanded="true" signature="2692:2693" ph="..." />
+            <marker date="1555605045626" expanded="true" signature="2692:2693" ph="..." />
+            <marker date="1555605045626" expanded="true" signature="3609:3614" ph="..." />
+            <marker date="1555605045626" expanded="true" signature="4332:4430" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/explore.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="46" column="18" lean-forward="true" selection-start-line="46" selection-start-column="18" selection-end-line="46" selection-end-column="18" />
+          <folding>
+            <element signature="e#139#158#0" expanded="true" />
           </folding>
         </state>
       </provider>

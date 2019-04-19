@@ -6,7 +6,6 @@ Author: Yeol Ye, University of Chicago
 
 
 from sklearn.model_selection import train_test_split
-from sklearn.neighbors import KNeighborsClassifier
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.tree import export_graphviz
@@ -23,9 +22,9 @@ def split(features, target, random_state=0):
     Split the data into training and testing set.
 
     Inputs:
-        features: (DataFrame)
-        target: (DataFrame)
-        random_state: (int)
+        features: (DataFrame) the feature columns of the data
+        target: (DataFrame) the target column of the data
+        random_state: (int) the random state to be chosen
 
     Returns:
         Four DataFrame objects.
@@ -41,8 +40,8 @@ def scale(X_train, X_test):
     Split the training and testing data.
 
     Inputs:
-        X_train: (DataFrame)
-        X_test: (DataFrame)
+        X_train: (DataFrame) the features used for training
+        X_test: (DataFrame) the features used for testing
 
     Returns:
         Four DataFrame objects.
@@ -59,9 +58,9 @@ def tree_classifier(X_train, y_train, max_depth=3):
     Build the decisoin tree model.
 
     Inputs:
-        X_train: (DataFrame)
-        X_test: (DataFrame)
-        max_depth: (int)
+        X_train: (DataFrame) the features used for training
+        X_test: (DataFrame) the features used for testing
+        max_depth: (int) the max depth of the decision tree
 
     Returns:
         The DecisionTreeClassifier object
@@ -110,7 +109,8 @@ def plot_feature_importances(clf, feature_names):
         None
     """
     c_features = len(feature_names)
-    plt.barh(range(c_features), sorted(clf.feature_importances_), color='g', alpha=0.3)
+    plt.barh(range(c_features), sorted(clf.feature_importances_), color='g',
+             alpha=0.3)
     plt.xlabel("Feature importance")
     plt.ylabel("Feature name")
     plt.yticks(np.arange(c_features), feature_names)

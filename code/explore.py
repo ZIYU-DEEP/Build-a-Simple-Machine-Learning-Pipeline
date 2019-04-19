@@ -104,6 +104,6 @@ def corr_plot(data):
     mask[np.triu_indices_from(mask)] = True
     f, ax = plt.subplots(figsize=(11, 9))
     cmap = sns.diverging_palette(220, 10, as_cmap=True)
-    sns.heatmap(corr, mask=mask, cmap=cmap, vmax=.3, center=0,
-                square=True, linewidths=.5, cbar_kws={"shrink": .5})
+    sns.heatmap(corr, mask=mask, cmap=cmap, vmax=1, center=0, annot=True,
+                fmt='.2f', square=True, linewidths=.5, cbar_kws={"shrink": .5})
     ax.set_title('The Correlation Matrix')

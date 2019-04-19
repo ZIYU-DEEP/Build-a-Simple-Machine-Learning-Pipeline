@@ -32,14 +32,14 @@ def count_plot(col_name, data, title):
 
 
 # *******************************************************************
-# Generate Plots for Numeric Data to Detect Distribution & Outliers
+# Generate Plots for Numeric Data to Detect Distribution & Separability
 # *******************************************************************
 def dist_plot(data, cut=True):
     """
     Draw a distribution plot for every column of the data.
 
     Inputs:
-        data: (DataFrame) the data
+        data: (DataFrame) the data containing features (only numeric)
         cut: (bool) if True, the values of data lower than 0.05 or higher than
         0.95 quantile will be filtered out; else there will be no filtering.
 
@@ -68,7 +68,7 @@ def box_plot(data):
     Draw a box plot for every column of the data.
 
     Inputs:
-        data: (DataFrame) the data
+        data: (DataFrame) the data containing features (only numeric)
 
     Returns:
         None
@@ -85,15 +85,32 @@ def box_plot(data):
         sns.boxplot(subdata, ax=axes[i // fig_cols, i % fig_cols], color='g')
 
 
+def pair_plot(data, target_name):
+    """
+    Draw the pair plot and see the separability of features for the data.
+    Different points with different target values are denoted by different colors.
+
+    Inputs:
+        data: (DataFrame) the data containing features (only numeric)
+        target_name: (string) the column name of the target
+
+    Returns:
+        None
+    """
+    sns.pairplot(data, size=3, hue=target_name, palette='husl')
+
+
 # *******************************************************************
 # Generate Correlation Matrix for Features to study Correlations
 # *******************************************************************
 def corr_plot(data):
     """
-    Draw a correlation matrix for the data.
+    Draw a correlation matrix for the data. This function is credit to the
+    official document of Seaborn (https://seaborn.pydata.org/examples/many_pai
+    rwise_correlations.html).
 
     Inputs:
-        data: (DataFrame) the data
+        data: (DataFrame) the data containing features (only numeric)
 
     Returns:
         None
@@ -107,3 +124,21 @@ def corr_plot(data):
     sns.heatmap(corr, mask=mask, cmap=cmap, vmax=1, center=0, annot=True,
                 fmt='.2f', square=True, linewidths=.5, cbar_kws={"shrink": .5})
     ax.set_title('The Correlation Matrix')
+
+
+# *******************************************************************
+# Drop Some Features with High Correlations to Others
+# *******************************************************************
+def drop_redundancy(data, col_names):
+    """
+    Drop the columns with high correlation to an existing column.
+
+    Inputs:
+        data: (DataFrame) the data storing feature columns
+        col_names: (list) the name of columns to be dropped
+
+    Returns:
+        data: (DataFrame) the cleaned data
+    """
+    data = data.drop(col_names, axis=1)
+    return data

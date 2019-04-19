@@ -2,8 +2,12 @@
   <dictionary name="ziyuye">
     <words>
       <w>cmap</w>
+      <w>discretize</w>
+      <w>husl</w>
       <w>kunyu</w>
       <w>quantile</w>
+      <w>rwise</w>
+      <w>seaborn</w>
       <w>subdata</w>
       <w>whitegrid</w>
       <w>yeol</w>
